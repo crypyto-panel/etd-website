@@ -55,7 +55,7 @@ Both passphrase and unlock duration are optional when using the JavaScript conso
 
 The unencrypted key will be held in memory until the unlock duration expires. If the unlock duration defaults to 300 seconds. An explicit duration of zero seconds unlocks the key until Getd exits.
 
-The account can be used with `etd_sign` and `etd_sendTransaction` while it is unlocked.
+The account can be used with `eth_sign` and `eth_sendTransaction` while it is unlocked.
 
 ### Examples
 
@@ -86,7 +86,7 @@ true
 
 Validate the given passphrase and submit transaction.
 
-The transaction is the same argument as for `etd_sendTransaction` and contains the `from` address. If the passphrase can be used to decrypt the private key belogging to `tx.from` the transaction is verified, signed and send onto the network. The account is not unlocked globally in the node and cannot be used in other RPC calls.
+The transaction is the same argument as for `eth_sendTransaction` and contains the `from` address. If the passphrase can be used to decrypt the private key belogging to `tx.from` the transaction is verified, signed and send onto the network. The account is not unlocked globally in the node and cannot be used in other RPC calls.
 
 Note, prior to Getd 1.5, please use `personal_signAndSendTransaction` as that was the original introductory name and only later renamed to the current final version.
 

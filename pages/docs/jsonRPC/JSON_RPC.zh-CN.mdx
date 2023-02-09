@@ -6,7 +6,7 @@ Getd 支持所有标准的 web3 JSON-RPC API。 您可以在 <a href="https://gi
 
 JSON-RPC 在多种传输上提供。 Getd 支持基于 HTTP、WebSocket 和 Unix 域套接字的 JSON-RPC。 必须通过命令行标志启用传输。
 
-以太坊 JSON-RPC API 使用命名空间系统。 RPC 方法根据其用途分为几类。 所有方法名称都由名称空间、下划线和名称空间内的实际方法名称组成。 例如，`etd_call` 方法驻留在`eth` 命名空间中。
+以太坊 JSON-RPC API 使用命名空间系统。 RPC 方法根据其用途分为几类。 所有方法名称都由名称空间、下划线和名称空间内的实际方法名称组成。 例如，`eth_call` 方法驻留在`eth` 命名空间中。
 
 可以在每个命名空间的基础上启用对 RPC 方法的访问。 在侧栏中查找各个命名空间的文档。
 
@@ -75,4 +75,3 @@ JSON-RPC API 也在 UNIX 域套接字上提供。 默认情况下启用此服务
 ```
 
 您可以使用 `--ipcpath` 标志配置套接字的位置。 可以使用 `--ipcdisable` 标志禁用 IPC。
-
