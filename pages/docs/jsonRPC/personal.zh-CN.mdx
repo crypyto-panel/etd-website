@@ -55,7 +55,7 @@ Repeat passphrase:
 
 未加密的密钥将保存在内存中，直到解锁持续时间到期。 如果解锁时长默认为 300 秒。 零秒的明确持续时间将解锁密钥，直到 Getd 退出。
 
-该帐户可以在解锁时与 `etd_sign` 和 `etd_sendTransaction` 一起使用。
+该帐户可以在解锁时与 `eth_sign` 和 `eth_sendTransaction` 一起使用。
 
 ### 代码示例
 
@@ -86,7 +86,7 @@ true
 
 验证给定的密码并提交交易。
 
-该交易与 `etd_sendTransaction` 的参数相同，并包含 `from` 地址。 如果密码短语可用于解密登录到“tx.from”的私钥，则交易被验证、签名并发送到网络上。 该账户在节点内未全局解锁，不能用于其他RPC调用。
+该交易与 `eth_sendTransaction` 的参数相同，并包含 `from` 地址。 如果密码短语可用于解密登录到“tx.from”的私钥，则交易被验证、签名并发送到网络上。 该账户在节点内未全局解锁，不能用于其他 RPC 调用。
 
 请注意，在 Getd 1.5 之前，请使用 `personal_signAndSendTransaction`，因为这是最初的介绍性名称，后来才重命名为当前的最终版本。
 
